@@ -7,13 +7,41 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-card *ngFor="let r of refeicoes">
+      <ion-card-title>
+        {{r.nome}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        Hora: {{r.horaFormat}}:{{r.minFormat}} - Calorias: {{r.valorCalorico}}
+      </ion-card-subtitle>
+      <ion-card-content>
+        {{r.descricao}}
+      </ion-card-content>
+    </ion-card>
 
-  <app-explore-container name="Refeições"></app-explore-container>
- 
+
+
+  <ion-button expand="full" (click)="toggleForm()">+</ion-button>
+  <div *ngIf="mostrarForm">
+    <form>
+      <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input type="string" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora</ion-label>
+        <ion-input type="string" [(ngModel)]="hora" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Calorias</ion-label>
+        <ion-input type="number" [(ngModel)]="valorCal" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Descricao</ion-label>
+        <ion-textarea type="string" [(ngModel)]="desc" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="full" (click)="adicionaRefeicao()">Adicionar Refeição</ion-button>
+    </form>
+  </div>
 </ion-content>
