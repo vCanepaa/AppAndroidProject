@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -7,34 +7,18 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  peso: number = 0;
-  altura: number = 0;
-  imc : number = 0;
 
-  constructor(private alertController: AlertController) {}
+  constructor(private router: Router,private router2:Router) {}
 
-  async calcularIMC() {
-    let alert;
-    if (this.peso && this.altura) {
-       this.imc = this.peso / (this.altura * this.altura);
-
-       alert = await this.alertController.create({
-        header: 'Seu IMC',
-        message: `Seu IMC é: ${this.imc.toFixed(2)}`,
-        buttons: ['OK']
-      });
-
-      
-    } else {
-       alert = await this.alertController.create({
-        header: 'Erro',
-        message: 'Por favor, insira peso e altura.',
-        buttons: ['OK']
-      });
-
-    }
-    await alert.present();
+  calcularCalorias(){
+    this.router2.navigate(['calorias'])
   }
+
+  calcularIMC() {
+    this.router.navigate(['imc']);
+  }
+
+  
 }
 
 

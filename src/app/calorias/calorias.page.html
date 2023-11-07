@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>calorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">calorias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <img alt="Prato saudavel." src="https://www.nutritirefeicoes.com.br/storage/images/jpg/RHNgheTxQqZQeFNOikCcQHrmullLHSeElQqlQ37Z.jpg" />
+    <ion-card-header>
+      <ion-card-title >Calorias </ion-card-title>
+      <ion-card-subtitle>calculadora de calorias dos alimentos</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      forneça quantas gramas de carboidratos, proteinas e gorduras você está consumindo e descubra aqui quantas kcal tem sua refeição.
+
+      <ion-item>
+        <ion-label position="floating">carboidratos(g)</ion-label>
+        <ion-input type="number" [(ngModel)]="carboidratos"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Proteinas(g)</ion-label>
+        <ion-input type="number" [(ngModel)]="proteinas"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">gorduras(g)</ion-label>
+        <ion-input type="number" [(ngModel)]="gorduras"></ion-input>
+      </ion-item>
+  
+      <ion-button expand="full" (click)="calcularCalorias()">Calcular calorias</ion-button>
+    
+      
+    
+    </ion-card-content>
+  
+    
+
+    
+    
+  </ion-card>
+</ion-content>

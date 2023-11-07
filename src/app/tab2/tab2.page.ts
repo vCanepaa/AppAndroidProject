@@ -15,7 +15,7 @@ export class Tab2Page {
   valorCal: number = 0;
   mostrarForm: boolean = false;
   refeicoes: Refeicao[] =[];
-  
+
 
   constructor() {}
 
@@ -25,7 +25,7 @@ export class Tab2Page {
     this.horario.setHours(parseInt(horaTemp[0]));
     this.horario.setMinutes(parseInt(horaTemp[1]));
 
-       
+
     const novaRefeicao = new Refeicao(this.horario,this.nome,this.valorCal,this.desc);
     this.refeicoes.push(novaRefeicao);
     }
@@ -33,7 +33,7 @@ export class Tab2Page {
     this.desc = '';
     this.valorCal = 0;
 
-    
+
 
     this.toggleForm();
   }
@@ -41,4 +41,4 @@ export class Tab2Page {
     this.mostrarForm = !this.mostrarForm;
   }
 
-}
+} 

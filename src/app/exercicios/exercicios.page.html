@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>exercicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">exercicios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item *ngFor="let exercicio of listaExercicios">
+    <ion-label>{{ exercicio.nome }}</ion-label>
+    <ion-checkbox slot="start" (ionChange)="toggleCheckbox(exercicio)"></ion-checkbox>
+    <ion-button (click)="verVideo(exercicio.videoUrl)">Assistir vídeo</ion-button>
+  </ion-item>
+</ion-content>
+  
+

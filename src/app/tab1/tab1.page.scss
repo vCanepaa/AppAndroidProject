@@ -1,4 +1,17 @@
+ion-title {
+  text-align: center; /* Centralizar o texto */
+  font-family: 'Arial', sans-serif; /* Exemplo de fonte personalizada */
+  font-size: 24px; /* Tamanho da fonte */
+  /* Outros estilos desejados */
+}
+.smallbutton {
+  font-size: 12px; /* Tamanho da fonte */
+  padding: 8px 90px; /* Espaçamento interno (top/bottom e left/right) */
+}
 .card {
     background-color: #000; // black
     box-shadow: none;
   }
+
+
+

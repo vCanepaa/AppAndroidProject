@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Indice de massa corporal (IMC)</ion-title>
+  </ion-toolbar>
+</ion-header>
+    
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">IMC</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <img alt="casal na academia." src="https://previous-assets.womenshealth.pt/files/2018/05/shutterstock_571976104.jpg" />
+    <ion-card-header>
+      <ion-card-title >IMC </ion-card-title>
+      <ion-card-subtitle>calculadora indice de massa corporal.</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Entender seu Índice de Massa Corporal (IMC) ajuda a avaliar a relação entre peso e altura, sendo uma ferramenta básica para monitorar a saúde e identificar potenciais riscos associados ao peso, facilitando a adoção de escolhas mais saudáveis.
+      <ion-item>
+        <ion-label position="floating">Peso (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="peso"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Altura (m)</ion-label>
+        <ion-input type="number" [(ngModel)]="altura"></ion-input>
+      </ion-item>
+  
+      <ion-button expand="full" (click)="calcularIMC()">Calcular IMC</ion-button>
+    
+    
+    </ion-card-content>
+
+    
+    
+  </ion-card>
+
+
+
+</ion-content>
+      
+    
+
+      
