@@ -22,6 +22,7 @@
       </ion-card-subtitle>
       <ion-card-content>
         {{r.descricao}}
+        
       </ion-card-content>
     </ion-card>
 
@@ -30,22 +31,24 @@
 
 
   <ion-button expand="full" (click)="toggleForm()">Clique aqui para adicionar uma refeição</ion-button>
+  <ion-button expand="full" (click)="limparBanco()">Excluir Refeições</ion-button>
+  
   <div *ngIf="mostrarForm">
     <form>
       <ion-item>
-        <ion-label>Nome</ion-label>
+        <ion-label>Nome :</ion-label>
         <ion-input type="string" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Hora</ion-label>
+        <ion-label>Hora :</ion-label>
         <ion-input type="string" [(ngModel)]="hora" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Calorias</ion-label>
+        <ion-label>Calorias :</ion-label>
         <ion-input type="number" [(ngModel)]="valorCal" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Descricao</ion-label>
+        <ion-label>Descricao :</ion-label>
         <ion-textarea type="string" [(ngModel)]="desc" [ngModelOptions]="{standalone: true}"></ion-textarea>
       </ion-item>
 
