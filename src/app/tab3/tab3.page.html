@@ -13,6 +13,69 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-card *ngFor="let r of treinos">
+    <ion-card-header>
+    <ion-card-title>
+      {{r.dia}}
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{r.treinoDoDia}}
+    </ion-card-subtitle>
+  </ion-card-header>
+
+    <ion-card-content>
+    <p>{{ r.exe1 }}</p>
+    <p>{{ r.exe2 }}</p>
+    <p>{{ r.exe3 }}</p>
+    <p>{{ r.exe4 }}</p>
+    <p>{{ r.exe5 }}</p>
+  </ion-card-content>
+</ion-card>
+
+
+      
+
   <app-explore-container name="exercicios"></app-explore-container>
-  <ion-button expand="full" (click)="mostrarExercicios()">Ir para exercicios</ion-button>
+
+  <ion-button class="smallbutton" expand="full" (click)="toggleForm1()">Clique aqui para adicionar uma refeição</ion-button>
+  <ion-button class="smallbutton" expand="full" (click)="mostrarExercicios()">Ir para exercicios</ion-button>
+  <ion-button class="smallbutton" expand="full" (click)="limparBancoTreino()">limpar dados de treino</ion-button>
+  
+
+  <div *ngIf="mostrarForm">
+    <form>
+      <ion-item>
+        <ion-label>dia :</ion-label>
+        <ion-input type="string" [(ngModel)]="dia" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>treino do dia :</ion-label>
+        <ion-input type="string" [(ngModel)]="treinoDoDia" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label>exercicio 1 :</ion-label>
+        <ion-textarea type="string" [(ngModel)]="exe1" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>exercicio 2 :</ion-label>
+        <ion-textarea type="string" [(ngModel)]="exe2" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>exercicio 3 :</ion-label>
+        <ion-textarea type="string" [(ngModel)]="exe3" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>exercicio 4 :</ion-label>
+        <ion-textarea type="string" [(ngModel)]="exe4" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>exercicio 5 :</ion-label>
+        <ion-textarea type="string" [(ngModel)]="exe5" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="full" (click)="adicionaTreino()">confirmar</ion-button>
+    </form>
+  </div>
+
 </ion-content>

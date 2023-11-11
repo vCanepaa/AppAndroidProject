@@ -26,7 +26,7 @@ export class Tab2Page {
     this.getRefeicao();
   }
   async limparBanco() {
-    await this.storage.clear(); 
+    await this.storage.remove('refeicoes');
 
     
     
