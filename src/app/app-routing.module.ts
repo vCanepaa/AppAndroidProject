@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'exercicios',
     loadChildren: () => import('./exercicios/exercicios.module').then( m => m.ExerciciosPageModule)
+  },
+  {
+    path: 'agua',
+    loadChildren: () => import('./agua/agua.module').then( m => m.AguaPageModule)
   }
 
 ];

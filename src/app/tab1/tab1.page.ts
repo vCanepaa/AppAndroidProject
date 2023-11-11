@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class Tab1Page {
 
-  constructor(private router: Router,private router2:Router) {}
+  constructor(private router: Router,private router2:Router, private router3:Router) {}
 
   calcularCalorias(){
     this.router2.navigate(['calorias'])
@@ -16,6 +16,10 @@ export class Tab1Page {
 
   calcularIMC() {
     this.router.navigate(['imc']);
+  }
+
+  calcularAgua(){
+    this.router.navigate(['agua'])
   }
 
   
