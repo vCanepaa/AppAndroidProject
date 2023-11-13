@@ -25,6 +25,7 @@ export class IMCPage implements OnInit {
         header: 'Seu IMC',
         message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é magreza.`,
         buttons: ['OK'],
+        cssClass: 'my-custom-alert'
         
       });
     }else if(this.imc >18.5 && this.imc <= 24.9){
@@ -32,27 +33,30 @@ export class IMCPage implements OnInit {
         header: 'Seu IMC',
         message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é normal.`,
         buttons: ['OK'],
-        
+        cssClass: 'my-custom-alert'
         
     });
   }else if(this.imc >24.9 && this.imc <= 29.9){
     alert = await this.alertController.create({
       header: 'Seu IMC',
       message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é Obesidade grau 1.`,
-      buttons: ['OK']
+      buttons: ['OK'],
+      cssClass: 'my-custom-alert'
   });
   }else if(this.imc >29.9 && this.imc <= 39.9){
     alert = await this.alertController.create({
       header: 'Seu IMC',
       message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é Obesidade grau 2.`,
-      buttons: ['OK']
+      buttons: ['OK'],
+      cssClass: 'my-custom-alert'
   });
 
   }else{
     alert = await this.alertController.create({
       header: 'Seu IMC',
       message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é Obesidade grau 3.`,
-      buttons: ['OK']
+      buttons: ['OK'],
+      cssClass: 'my-custom-alert'
   });
 
   }
@@ -64,12 +68,14 @@ export class IMCPage implements OnInit {
        alert = await this.alertController.create({
         header: 'Erro',
         message: 'Por favor, insira peso e altura.',
-        buttons: ['OK']
+        buttons: ['OK'],
+        cssClass: 'my-custom-alert'
       });
 
      
 
     }
+    
     await alert.present();
   }
 

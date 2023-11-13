@@ -62,7 +62,13 @@ ion-button {
   
   
   }
-  
-  
-  
+  .my-custom-alert .alert-wrapper .alert-message {
+    color: white;
+  }
+  .my-custom-alert .alert-wrapper .alert-button-group .alert-button {
+    color: white;
+  }
+  .my-custom-alert .alert-wrapper .alert-head .alert-title {
+    color: #fff100 !important;
+  }
   
