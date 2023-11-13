@@ -9,5 +9,28 @@
     box-shadow: none;
   }
 
-
-
+  :host {
+    --background-image: url('https://tecnofit-site.s3.sa-east-1.amazonaws.com/media/files/2023/02/13111808/investimento-em-academia-de-musculacao.png');
+  }
+  
+  ion-content {
+    --background: transparent;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+  height: 100vh;
+  }
+  
+  .custom-background {
+    background: var(--background) var(--background-image) no-repeat center center fixed;
+    background-size: cover;
+  }
+  .custom-content {
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 60px;
+  }
+  

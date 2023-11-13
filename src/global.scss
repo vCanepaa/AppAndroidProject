@@ -25,6 +25,10 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+ion-button {
+  
+  text-transform: none; /* Impede a transformação automática para maiúsculas */
+}
 .titulotab {
     text-align: center; /* Centralizar o texto */
     font-family: 'Arial', sans-serif; /* Exemplo de fonte personalizada */
@@ -34,10 +38,31 @@
   .smallbutton {
     font-size: 12px; /* Tamanho da fonte */
     padding: 8px 90px; /* Espaçamento interno (top/bottom e left/right) */
+    
   }
   .card {
       background-color: #000; // black
       box-shadow: none;
     }
+  :root{
+    --ion-font-family: 'Poppins', sans-serif;
+
+    --ion-toolbar-background: #29065a;
+  --ion-toolbar-color: #fff100;
+
+  --ion-background-color: linear-gradient(180deg, #29065a 0%, #7314fd 100%);
+
+  
+  --ion-tab-bar-background: #29065a;
+  --ion-tab-bar-color: white;
+  --ion-tab-bar-color-selected: #fff100;
+
+  --ion-card-background: white;
+  --ion-item-background: transparent;
+  
+  
+  }
+  
+  
   
   

@@ -24,13 +24,16 @@ export class IMCPage implements OnInit {
        alert = await this.alertController.create({
         header: 'Seu IMC',
         message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é magreza.`,
-        buttons: ['OK']
+        buttons: ['OK'],
+        
       });
     }else if(this.imc >18.5 && this.imc <= 24.9){
       alert = await this.alertController.create({
         header: 'Seu IMC',
         message: `Seu IMC é : ${this.imc.toFixed(2)} kg/m2, sua classificação é normal.`,
-        buttons: ['OK']
+        buttons: ['OK'],
+        
+        
     });
   }else if(this.imc >24.9 && this.imc <= 29.9){
     alert = await this.alertController.create({
@@ -63,6 +66,8 @@ export class IMCPage implements OnInit {
         message: 'Por favor, insira peso e altura.',
         buttons: ['OK']
       });
+
+     
 
     }
     await alert.present();

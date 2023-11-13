@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'imc',
     loadChildren: () => import('./imc/imc.module').then( m => m.IMCPageModule)
   },
