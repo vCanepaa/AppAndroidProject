@@ -17,14 +17,16 @@ export class AguaPage implements OnInit {
 
       alert = await this.alertController3.create({
         header: 'Quantidade de água',
-        message: `a quantidade de água ideal por dia é: ${this.aguaPorDia.toFixed(2)} ml.`,
-        buttons: ['OK']
+        message: `a quantidade de água ideal por dia é : ${this.aguaPorDia.toFixed(2)} ml.`,
+        buttons: ['OK'],
+        cssClass: 'my-custom-alert'
       });
 
     }else{alert = await this.alertController3.create({
         header: 'Erro',
         message: 'Por favor,insira seu peso corretamente',
-        buttons: ['OK']
+        buttons: ['OK'],
+        cssClass: 'my-custom-alert'
       });
     }
     await alert.present();

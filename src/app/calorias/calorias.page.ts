@@ -22,14 +22,16 @@ export class CaloriasPage implements OnInit {
 
       alert = await this.alertController2.create({
         header: 'calorias Totais',
-        message: `a quantidade de calorias é: ${this.caloriasTotal.toFixed(2)} kcal.`,
-        buttons: ['OK']
+        message: `a quantidade de calorias é : ${this.caloriasTotal.toFixed(2)} kcal.`,
+        buttons: ['OK'],
+        cssClass: 'my-custom-alert'
       });
 
     }else{alert = await this.alertController2.create({
         header: 'Erro',
         message: 'Por favor,insira pelo menos um dos valores corretamente',
-        buttons: ['OK']
+        buttons: ['OK'],
+        cssClass: 'my-custom-alert'
       });
     }
     await alert.present();

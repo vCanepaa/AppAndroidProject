@@ -15,7 +15,7 @@
 
     <ion-card *ngFor="let r of refeicoes">
       <ion-card-title>
-        {{  r.nome}}
+        {{r.nome}}
       </ion-card-title>
       <ion-card-subtitle>
         - Hora: {{r.horaFormat}}:{{r.minFormat}} - Calorias: {{r.valorCalorico}}
@@ -34,7 +34,7 @@
   <ion-button class="smallbutton" expand="full" (click)="limparBanco()">Excluir Refeições</ion-button>
   
   <div *ngIf="mostrarForm">
-    <form>
+    <form class="letrasformulario">
       <ion-item>
         <ion-label>Nome :</ion-label>
         <ion-input type="string" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}"></ion-input>

@@ -37,13 +37,13 @@
 
   <app-explore-container name="exercicios"></app-explore-container>
 
-  <ion-button class="smallbutton" expand="full" (click)="toggleForm1()">Clique aqui para adicionar uma refeição</ion-button>
+  <ion-button class="smallbutton" expand="full" (click)="toggleForm1()">Clique aqui para adicionar um novo treino</ion-button>
   <ion-button class="smallbutton" expand="full" (click)="mostrarExercicios()">Ir para exercicios</ion-button>
   <ion-button class="smallbutton" expand="full" (click)="limparBancoTreino()">limpar dados de treino</ion-button>
   
 
   <div *ngIf="mostrarForm">
-    <form>
+    <form class="letrasformulario">
       <ion-item>
         <ion-label>dia :</ion-label>
         <ion-input type="string" [(ngModel)]="dia" [ngModelOptions]="{standalone: true}"></ion-input>
