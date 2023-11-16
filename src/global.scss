@@ -40,7 +40,9 @@ ion-button {
   }
   .smallbutton {
     font-size: 12px; /* Tamanho da fonte */
-    padding: 9px 110px; /* Espaçamento interno (top/bottom e left/right) */
+    
+    width: 100%; // ou outra porcentagem desejada
+  height: 3em;
     
   }
   .card {
